@@ -12,5 +12,5 @@ function selectPlan(planName, monthlyRate){
     let nextYear = new Date();
     nextYear.setFullYear (today.getFullYear() + 1);
     let gooduntilValue = document.getElementById("gooduntil");
-    gooduntilValue.innerHTML = nextYear.toDateString;
+    gooduntilValue.innerHTML = nextYear.toDateString();
 }
