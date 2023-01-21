@@ -8,19 +8,19 @@ function calculateAnnualRate( monthlyRate){
 function selectPlan(planName, monthlyRate){
     let annualrate = calculateAnnualRate(monthlyRate);
 
-    let planVale = document.getElementById("planname");
-    planVale.innerHTML = planName;
+    let planNameElement = document.getElementById("planname");
+    planNameElement.innerHTML = planName;
 
-    let monthlyRateVale = document.getElementById("monthlyrate");
-    monthlyRateVale.innerHTML = "$" + monthlyRate + "/mo";
+    let monthlyRateElement = document.getElementById("monthlyrate");
+    monthlyRateElement.innerHTML = "$" + monthlyRate + "/mo";
 
-    let annualRateValue = document.getElementById("annualrate");
-    annualRateValue.innerHTML = "$" + annualrate + "/yr";
+    let annualRateElement = document.getElementById("annualrate");
+    annualRateElement.innerHTML = "$" + annualrate + "/yr";
 
-    let todayDate = new Date();
+    let today = new Date();
     let nextYear = new Date();
-    nextYear.setFullYear = todayDate.getFullYear + 1;
+    nextYear.setFullYear = today.getFullYear + 1;
 
-    let gooduntilValue = document.getElementById("gooduntil");
-    gooduntilValue.innerHTML = nextYear.toDateString();
+    let gooduntilElement = document.getElementById("gooduntil");
+    gooduntilElement.innerHTML = nextYear.toDateString();
 }
