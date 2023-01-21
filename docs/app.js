@@ -1,10 +1,12 @@
 "use strict";
+
 function calculateAnnualRate( monthlyRate){
     let annualrate = monthlyRate * 12;
     return annualrate;
 }
 
 function selectPlan(planName, monthlyRate){
+    let annualrate = calculateAnnualRate(monthlyRate);
 
     let planVale = document.getElementById("planname");
     planVale.innerHTML = planName;
